@@ -3,8 +3,18 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 7vmin;
   pointer-events: none;
+  vertical-align: middle;
+}
+
+.block_container
+{
+  text-align:center;
+}
+.bloc1, .bloc2
+{
+  display:inline;
 }
 
 @media (prefers-reduced-motion: no-preference) {
