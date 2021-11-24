@@ -1,15 +1,11 @@
-import React from 'react';
-const EncryptionMethod1 = () =>{
+import React, {Fragment} from 'react';
+const EncryptionMethod1 = () => {
     return (
-        <div>
-            <h3>Dogs</h3>
+        <Fragment>
             <div>
-                <img src="./dog.png"/>
-                <img src="./dog.png"/>
+                <h3>Encryption1</h3>
             </div>
-        </div>
-    );
-}
+        </Fragment>
+);
+};
 export default EncryptionMethod1;
-
-EncryptionMethod1.js

@@ -1,21 +1,58 @@
-import React from 'react';
-import {  Link } from "react-router-dom";
-const navbar= () =>{
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+
+const Navbar = () => {
+    const [isOpen, setOpen] = useState(false);
     return (
-        <div>
-            <li>
-                <Link to="/">Encryption 1</Link>
-            </li>
-            <li>
-                <Link to="/Encryption 2">Encryption 2</Link>
-            </li>
-            <li>
-                <Link to="/Encryption 3">Encryption 3</Link>
-            </li>
-            <li>
-                <Link to="/Encryption 4">Encryption 4</Link>
-            </li>
-        </div>
+        <nav
+            className="navbar is-primary"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <div className="container">
+                <div className="navbar-brand">
+                    <a
+                        role="button"
+                        className={`navbar-burger burger ${isOpen && "is-active"}`}
+                        aria-label="menu"
+                        aria-expanded="false"
+                        onClick={() => setOpen(!isOpen)}
+                    >
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+
+                <div className={`navbar-menu ${isOpen && "is-active"}`}>
+                    <div className="navbar-start">
+                        <NavLink className="navbar-item" activeClassName="is-active" to="/">
+                            Home
+                        </NavLink>
+
+                        <NavLink
+                            className="navbar-item"
+                            activeClassName="is-active"
+                            to="/2"
+                        >
+                            About
+                        </NavLink>
+
+                        <NavLink
+                            className="navbar-item"
+                            activeClassName="is-active"
+                            to="/3"
+                        >
+                            Profile
+                        </NavLink>
+                    </div>
+
+                    <div className="navbar-end">
+                    </div>
+                </div>
+            </div>
+        </nav>
     );
-}
-export default navbar;
+};
+
+export default Navbar;

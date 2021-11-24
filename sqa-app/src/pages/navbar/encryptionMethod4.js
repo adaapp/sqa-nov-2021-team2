@@ -1,15 +1,9 @@
 import React from 'react';
-const EncryptionMethod4 = () =>{
+const EncryptionMethod4 = () => {
     return (
         <div>
-            <h3>Goat</h3>
-            <div>
-                <img src="./goats.png"/>
-                <img src="./mountaingoat.jpg"/>
-            </div>
+            <h3>Encryption4</h3>
         </div>
     );
-}
+};
 export default EncryptionMethod4;
-
-EncryptionMethod4.js
