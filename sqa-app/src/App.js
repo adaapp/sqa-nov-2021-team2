@@ -13,9 +13,9 @@ function App() {
           <navbar />
           <Routes>
               <Route path='/' exact component={EncryptionMethod1} />
-              <Route path='/cats' component={EncryptionMethod2} />
-              <Route path='/sheeps' component={EncryptionMethod3} />
-              <Route path='/goats' component={EncryptionMethod4} />
+              <Route path='/EncryptionMethod2' component={EncryptionMethod2} />
+              <Route path='/EncryptionMethod3' component={EncryptionMethod3} />
+              <Route path='/EncryptionMethod4' component={EncryptionMethod4} />
           </Routes>
       </Router>
     // <div className="App">
