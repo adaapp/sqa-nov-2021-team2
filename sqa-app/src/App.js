@@ -1,15 +1,17 @@
-import logo from './assets/keyIcon.png';
 import './App.css';
 import CipherType from './components/CipherType';
-import Title from './components/Title'
+import CipherInput from './components/CipherInput'
 
 function App() {
     return (
         <>
-            <div className={"App"}>
-                <Title />
-                <CipherType />
-            </div>
+            <h1> Cipher App</h1>
+            <h2>Select Cipher Method</h2>
+            <CipherType />
+            <h2>Pre-encrypted</h2>
+            <CipherInput />
+            <h2>Post Encryption</h2>
+            <CipherInput />
         </>
     );
 }

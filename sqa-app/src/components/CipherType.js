@@ -1,10 +1,10 @@
 import React from "react";
-import './CipherType.css';
+
 
 export default function cipherType() {
     return (
-        <div className={"selectWrapper"}>
-            <select className={"selectBox"}>
+        <div>
+            <select>
                 <option value={"Cipher1"}>
                     Cipher 1
                 </option>
