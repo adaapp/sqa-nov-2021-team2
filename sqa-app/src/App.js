@@ -50,6 +50,7 @@ function App() {
                 cipherString={postEncryptionText}
                 onChangeCipherString={handlePostCipherStringChange}
             />
+            <CipherLogic />
         </>
     );
 }
