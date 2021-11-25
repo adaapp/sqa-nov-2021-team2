@@ -19,7 +19,7 @@ function App() {
     }
 
     useEffect(() => {
-        console.log("CIPHER CHANGE - RERUN LOGIC HERE")
+        //TODO Add code to rerun logic upon cipher change
     }, [cipherType])
 
     function handlePreCipherStringChange(e) {
