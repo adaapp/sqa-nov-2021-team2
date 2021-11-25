@@ -1,7 +1,7 @@
 import './App.css';
 import CipherType from './components/CipherType';
 import CipherInput from './components/CipherInput'
-import CipherLogic from './components/CipherLogic'
+import CipherLogic from './CipherLogic/CeaserCipher'
 
 function App() {
     return (

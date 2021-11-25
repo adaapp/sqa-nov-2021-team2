@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function cipherLogic() {
+export default function CeaserCipher() {
     let result = '';
     let s = "rgg";
     let k = -2;
@@ -33,8 +33,10 @@ export default function cipherLogic() {
 
         result += String.fromCharCode(charCode);
         console.log(result)
+        console.log("TEST")
 
-}
+
+    }
 return null
 
 }
