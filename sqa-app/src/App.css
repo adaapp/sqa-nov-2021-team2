@@ -33,8 +33,13 @@ h2 {
 select {
   background: azure;
   width:140px;
-  height:40px;
+  height:30px;
   border:0px;
-  border-radius:36px;
+  border-radius:25px;
   outline:none;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
 }

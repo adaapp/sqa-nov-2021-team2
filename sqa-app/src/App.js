@@ -3,6 +3,7 @@ import CipherType from './components/CipherType';
 import CipherInput from './components/CipherInput'
 import {useEffect, useState} from "react";
 import CaesarCipher from "./CipherLogic/CaesarCipher";
+import logo from "./assets/keyIcon.png"
 
 function App() {
     const [cipherType, setCipherType] = useState("caesar");
@@ -55,6 +56,7 @@ function App() {
                 cipherString={postEncryptionText}
                 onChangeCipherString={handlePostCipherStringChange}
             />
+            <img src={logo} alt={"logo"} className="logo"/>
         </>
     );
 }

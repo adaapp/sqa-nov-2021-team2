@@ -1,6 +1,5 @@
 import React from "react";
 
-
 export default function cipherType(props) {
     const {
         selectedType,
