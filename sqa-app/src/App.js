@@ -2,6 +2,7 @@ import './App.css';
 import CipherType from './components/CipherType';
 import CipherInput from './components/CipherInput'
 import {useEffect, useState} from "react";
+import CipherLogic from './CipherLogic/CeaserCipher'
 
 function App() {
     const [cipherType, setCipherType] = useState("Cipher1");
