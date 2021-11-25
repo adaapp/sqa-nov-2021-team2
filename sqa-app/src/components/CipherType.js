@@ -9,11 +9,11 @@ export default function cipherType(props) {
     return (
         <div>
             <select value={selectedType} onChange={onChangeType}>
-                <option value={"Cipher1"}>
+                <option value={"caesar"}>
                     Caesar Cipher
                 </option>
-                <option value={"Cipher2"}>
-                    Cipher 2
+                <option value={"vigenere"}>
+                    Vigenere Cipher
                 </option>
                 <option value={"Cipher3"}>
                     Cipher 3

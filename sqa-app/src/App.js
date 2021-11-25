@@ -5,13 +5,13 @@ import {useEffect, useState} from "react";
 import CaesarCipher from "./CipherLogic/CaesarCipher";
 
 function App() {
-    const [cipherType, setCipherType] = useState("Cipher1");
-    const [cipherString, setCipherString] = useState("abc");
+    const [cipherType, setCipherType] = useState("caesar");
+    const [cipherString, setCipherString] = useState("");
     const [cipherInString, setCipherInString] = useState(true)
 
     let preEncryptionText, postEncryptionText;
 
-    if (cipherType === "Cipher1") {
+    if (cipherType === "caesar") {
         if (cipherInString) {
             preEncryptionText = cipherString;
             postEncryptionText = CaesarCipher(cipherString, 2);
@@ -19,11 +19,9 @@ function App() {
             postEncryptionText = cipherString;
             preEncryptionText = CaesarCipher(cipherString, -Math.abs(2));
         }
-    } else {
-        preEncryptionText = "INVALID";
-        postEncryptionText = "INVALID";
-    }
+    }else if (cipherType === "vigenere") {
 
+    }
 
     useEffect(() => {
         //TODO Add code to rerun logic upon cipher change
