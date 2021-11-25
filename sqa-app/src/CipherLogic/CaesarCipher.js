@@ -1,10 +1,7 @@
-import React from "react";
 //A Caesar cipher is a simple method of encoding messages.
 // Caesar ciphers use a substitution method where letters in the alphabet are shifted by some fixed number of spaces to yield an encoding alphabet.
-export default function CeaserCipher() {
+export default function CaesarCipher(s, k) {
     let result = '';
-    let s = "rgg";
-    let k = -2;
     for (let i = 0; i < s.length; i++) {
 
         let charCode = s[i].charCodeAt();
@@ -36,8 +33,7 @@ export default function CeaserCipher() {
         console.log(result)
         console.log("TEST")
 
-
     }
-return null
+return result;
 
 }
