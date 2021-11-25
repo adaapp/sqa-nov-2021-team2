@@ -1,0 +1,16 @@
+.selectBox {
+    background: azure;
+    width:140px;
+    height:40px;
+    border:0px;
+    border-radius:36px;
+    outline:none;
+}
+
+.selectWrapper{
+    border-radius:36px;
+    display:inline-block;
+    overflow:hidden;
+    background:#cccccc;
+    border:1px solid #cccccc;
+}

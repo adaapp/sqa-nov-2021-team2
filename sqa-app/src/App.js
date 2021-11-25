@@ -1,41 +1,21 @@
-import logo from './assets/keyIcon.png';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import navbar from "./components/navbar"
-import EncryptionMethod1 from "./pages/navbar/encryptionMethod1"
-import EncryptionMethod2 from "./pages/navbar/encryptionMethod2"
-import EncryptionMethod3 from "./pages/navbar/encryptionMethod3"
-import EncryptionMethod4 from "./pages/navbar/encryptionMethod4"
 import './App.css';
+import CipherType from './components/CipherType';
+import CipherInput from './components/CipherInput'
+import CipherLogic from './CipherLogic/CeaserCipher'
 
 function App() {
-  return (
-      <Router>
-          <navbar />
-          <Routes>
-              <Route path='/' exact component={EncryptionMethod1} />
-              <Route path='/EncryptionMethod2' component={EncryptionMethod2} />
-              <Route path='/EncryptionMethod3' component={EncryptionMethod3} />
-              <Route path='/EncryptionMethod4' component={EncryptionMethod4} />
-          </Routes>
-      </Router>
-    // <div className="App">
-    //   <header className="App-header">
-    //       <div className="headerContainer">
-    //           <div className="headerBlock">
-    //               <img src={logo} className="App-logo" alt="logo" />
-    //           </div>
-    //           <div className="headerBlock">
-    //               <p>
-    //                   Cipher App
-    //               </p>
-    //           </div>
-    //       </div>
-    //       <div>
-    //
-    //       </div>
-    //   </header>
-    // </div>
-  );
+    return (
+        <>
+            <h1> Cipher App</h1>
+            <h2>Select Cipher Method</h2>
+            <CipherType />
+            <h2>Pre-encrypted</h2>
+            <CipherInput />
+            <h2>Post Encryption</h2>
+            <CipherInput />
+            <CipherLogic />
+        </>
+    );
 }
 
 export default App;
