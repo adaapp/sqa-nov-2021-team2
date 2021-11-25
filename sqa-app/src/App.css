@@ -30,6 +30,14 @@ h2 {
   width: 21em;
 }
 
+.smallInput {
+  border: 1px solid #333;
+  border-radius: .3rem;
+  padding: .25rem;
+  margin-top: .5rem;
+  width: 10em;
+}
+
 select {
   background: azure;
   width:140px;
