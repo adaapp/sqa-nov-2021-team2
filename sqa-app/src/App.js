@@ -1,6 +1,7 @@
 import './App.css';
 import CipherType from './components/CipherType';
 import CipherInput from './components/CipherInput'
+import CipherLogic from './components/CipherLogic'
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <CipherInput />
             <h2>Post Encryption</h2>
             <CipherInput />
+            <CipherLogic />
         </>
     );
 }
