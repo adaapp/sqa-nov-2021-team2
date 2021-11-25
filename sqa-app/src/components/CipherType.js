@@ -1,10 +1,14 @@
 import React from "react";
 
 
-export default function cipherType() {
+export default function cipherType(props) {
+    const {
+        selectedType,
+        onChangeType
+    } = props;
     return (
         <div>
-            <select>
+            <select value={selectedType} onChange={onChangeType}>
                 <option value={"Cipher1"}>
                     Cipher 1
                 </option>
