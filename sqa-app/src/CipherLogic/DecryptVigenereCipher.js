@@ -1,3 +1,9 @@
+/*
+Code used for decrypting Vigenere Cipher
+Takes 2 args
+str Cipher text, str key
+ */
+
 export default function DecryptVigenereCipher(cipher_text, key) {
 
     let orig_text="";
@@ -25,7 +31,6 @@ export default function DecryptVigenereCipher(cipher_text, key) {
 
         // converting in range 0-25
         if (cipher_text[i] !== undefined){
-            console.log("Cipher Text: " + cipher_text[i])
             let x = (((cipher_text[i].charCodeAt(0)) - (newKey[i].charCodeAt(0)) + 26) % 26);
 
             // convert into alphabets(ASCII)

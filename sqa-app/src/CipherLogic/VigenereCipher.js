@@ -55,18 +55,7 @@ export default function VigenereCipher(str, keyword) {
             return s;
         }
 
-        // Driver code
-        // let str = "GEEKSFORGEEKS";
-        // let keyword = "AYUSH";
-
-
         let key = generateKey(str, keyword);
 
         return cipherText(str, key);
-
-        // document.write("Ciphertext : "
-        // + cipher_text + "<br><br>");
-        //
-        // document.write("Original/Decrypted Text : "
-        // + originalText(cipher_text, key)+"<br>");
 }

@@ -26,7 +26,7 @@ function App() {
             preEncryptionText = CaesarCipher(cipherString, -Math.abs(caesarCipherShift));
         }
     }else if (cipherType === "vigenere") {
-        if ((userVigenereKey != undefined) || (userVigenereKey != '')) {
+        if ((userVigenereKey !== undefined) || (userVigenereKey !== '')) {
             if (cipherInString) {
                 preEncryptionText = cipherString;
                 postEncryptionText =VigenereCipher(cipherString, userVigenereKey);
