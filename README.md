@@ -14,7 +14,7 @@ Our project is based around Ciphers, both encrypting and decrypting. With clear,
 | ------------- |:-------------:| -------------:|
 | William Fifield      | PM - Tester | Manage SCRUM meetings, Create tickets aligned with requirements, test against requirements |
 | Kieran Caruana      | Developer      |   Build and deploy working application |
-| Ethan Davison-Pearce | Developer - Tester      |    Build and deploy working application, test test against requirements |
+| Ethan Davison-Pearce | Developer - Tester      |    Build and deploy working application, test against requirements |
 
 ## Team Process Documentation
 ### Ceremonies
