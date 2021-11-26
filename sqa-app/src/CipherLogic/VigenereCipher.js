@@ -35,6 +35,9 @@ export default function VigenereCipher(str, keyword) {
             return cipher_text;
         }
 
+        str = str.toUpperCase();
+        keyword = keyword.toUpperCase();
+
         let key = generateKey(str, keyword);
 
         return cipherText(str, key);

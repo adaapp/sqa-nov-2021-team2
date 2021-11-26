@@ -4,10 +4,10 @@ Takes 2 args
 str Cipher text, str key
  */
 
-import VigenereCipher from "./VigenereCipher";
-
 export default function DecryptVigenereCipher(cipher_text, key) {
 
+    cipher_text = cipher_text.toUpperCase();
+    key = key.toUpperCase();
     let orig_text="";
     let newKey
 
