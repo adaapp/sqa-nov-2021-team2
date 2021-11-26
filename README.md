@@ -19,6 +19,7 @@ Our project is based around Ciphers, both encrypting and decrypting. With clear,
 ## Team Process Documentation
 ### Ceremonies
 Within the team, we have regular meetings talking about issues and blockers in the project. This helps the development of the project, due to not having a lot of time. Working Agile, we've sped up the process of planning and reviews to fit within the time frame, but are able to use these communication methods to progress business requirements of the team, the development, testing and deployment.
+
 ### PR Review Rules
 - PR is going into the development branch, not to mess with the main branch.
 - PR needs to be resolved quickly, either with comments to amend or pulled into the development branch.
@@ -26,6 +27,20 @@ Within the team, we have regular meetings talking about issues and blockers in t
 - Coding standards are upheld (refer to lower in this document).
 - PR cannot be approved and merged by the same person that created the PR. 
 
+### Definition of Done
+The definition is done is a clear checklist for completing user stories within projects. The term "done" means that the particular feature has been developed, fully tested and meets the requirements for the story. A clear test for this is by asking the question: "Would the customer be happy with this being deployed?".
+
+- Unit tests passed
+- Code reviewed
+- Functional tests with QA are passed
+- Issues detected during QA are resolved
+- Non-functional UAT testing requirements met
+- Issues detected during UAT are resolved
+- Blockers, critical and major bugs are fixed
+- Acceptance criteria met
+- Product Owner accepts the user story
+
+### Types of testing this team will be using
 
 
 ## Available Scripts
