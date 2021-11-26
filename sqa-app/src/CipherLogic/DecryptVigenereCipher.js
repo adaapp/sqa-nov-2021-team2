@@ -4,8 +4,6 @@ Takes 2 args
 str Cipher text, str key
  */
 
-import VigenereCipher from "./VigenereCipher";
-
 export default function DecryptVigenereCipher(cipher_text, key) {
 
     let orig_text="";
