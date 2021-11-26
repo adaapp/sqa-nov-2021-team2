@@ -17,6 +17,10 @@ export default function VigenereCipher(str, keyword) {
         // generated with the help of the key
         function cipherText(str,key)
         {
+            // console.log("Before " + str)
+            // str = str.toUpperCase();
+            // console.log("After " + str)
+            // str = LowerToUpper(str)
             if ((key === undefined) || (key === '') || (key === null)){
                 key = "NO KEY"
             }

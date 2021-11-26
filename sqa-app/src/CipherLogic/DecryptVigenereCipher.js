@@ -4,11 +4,14 @@ Takes 2 args
 str Cipher text, str key
  */
 
+import VigenereCipher from "./VigenereCipher";
+
 export default function DecryptVigenereCipher(cipher_text, key) {
 
     let orig_text="";
     let newKey
 
+    // cipher_text = cipher_text.toUpperCase()
     key=key.split("");
     if(cipher_text.length === key.length)
         newKey =  key.join("");
@@ -38,5 +41,6 @@ export default function DecryptVigenereCipher(cipher_text, key) {
             orig_text += (String.fromCharCode(x));
         }
     }
+
     return orig_text;
 }
