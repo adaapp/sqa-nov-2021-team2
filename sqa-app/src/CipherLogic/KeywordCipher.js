@@ -1,9 +1,9 @@
 // TODO Add decs
 // TODO Link with frontend
-export default function CaesarCipher(msg, key) {
+export default function KeywordCipher(msg, key) {
 
     let encodedKey = encoder(key)
-    let encodedMsg = cipheredIt(msg)
+    let encodedMsg = cipheredIt(msg, encodedKey)
     function encoder(key)
     {
         let encoded = "";
@@ -53,6 +53,7 @@ export default function CaesarCipher(msg, key) {
                 encoded += String.fromCharCode(i + 65);
             }
         }
+        console.log("Forward Key: " + encoded);
         return encoded;
     }
 
@@ -67,13 +68,13 @@ export default function CaesarCipher(msg, key) {
         {
             if (msg[i] >= 'a' && msg[i] <= 'z')
             {
-                let pos = msg[i].charCodeAt(0) - 97;
-                cipher += encoded[pos];
+                let pos = ((msg[i].charCodeAt(0)) - 97);
+                cipher += (encoded[pos]);
             }
             else if (msg[i] >= 'A' && msg[i] <= 'Z')
             {
-                let pos = msg[i].charCodeAt(0) - 65;
-                cipher += encoded[pos];
+                let pos = ((msg[i].charCodeAt(0)) - 65);
+                cipher += (encoded[pos]);
             }
             else
             {
@@ -82,5 +83,5 @@ export default function CaesarCipher(msg, key) {
         }
         return cipher;
     }
-
+    return encodedMsg;
 }

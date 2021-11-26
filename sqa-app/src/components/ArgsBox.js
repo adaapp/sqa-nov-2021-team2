@@ -6,7 +6,9 @@ export default function argsBox(props) {
         shiftValue,
         onShiftValueChange,
         vigenereKey,
-        onVigenereKeyChange
+        onVigenereKeyChange,
+        keywordKey,
+        onKeywordKeyChange
     } = props;
     return (
         <div >
@@ -14,6 +16,8 @@ export default function argsBox(props) {
                 <input type="number" className="smallInput" placeholder={"Number of shifts"} value={shiftValue} onChange={onShiftValueChange} />
             ) : cipherTypeSelected === "vigenere" ? (
                 <input type="string" className="smallInput" placeholder={"Enter Key"} value={vigenereKey} onChange={onVigenereKeyChange} />
+            ) : cipherTypeSelected === "keyword" ? (
+                <input type="string" className="smallInput" placeholder={"Enter Key"} value={keywordKey} onChange={onKeywordKeyChange} />
             ) : (
                 <div/>
             )}

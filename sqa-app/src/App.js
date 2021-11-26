@@ -7,6 +7,8 @@ import logo from "./assets/keyIcon.png"
 import ArgsBox from "./components/ArgsBox";
 import VigenereCipher from "./CipherLogic/VigenereCipher";
 import DecryptVigenereCipher from "./CipherLogic/DecryptVigenereCipher";
+import KeywordCipher from "./CipherLogic/KeywordCipher";
+import DecryptKeywordCipher from "./CipherLogic/DecryptKeywordCipher";
 
 function App() {
     const [cipherType, setCipherType] = useState("caesar");
@@ -14,6 +16,7 @@ function App() {
     const [cipherInString, setCipherInString] = useState(true);
     const [caesarCipherShift, setCaesarCipherShift] = useState();
     const [userVigenereKey, setUserVigenereKey] = useState("NO KEY");
+    const [keywordUserKey, setKeywordUserKey] = useState("NO KEY");
 
     let preEncryptionText, postEncryptionText;
 
@@ -29,9 +32,22 @@ function App() {
         if ((userVigenereKey !== undefined) || (userVigenereKey !== '')) {
             if (cipherInString) {
                 preEncryptionText = cipherString;
-                postEncryptionText =VigenereCipher(cipherString, userVigenereKey);
+                postEncryptionText = VigenereCipher(cipherString, userVigenereKey);
             } else {
                 preEncryptionText = DecryptVigenereCipher(cipherString, userVigenereKey)
+                postEncryptionText = cipherString;
+            }
+        }else {
+            preEncryptionText = "NO KEY"
+            postEncryptionText = "NO KEY"
+        }
+    }else if (cipherType === "keyword"){
+        if ((keywordUserKey !== undefined) || (keywordUserKey !== '')){
+            if (cipherInString) {
+                preEncryptionText = cipherString;
+                postEncryptionText = KeywordCipher(cipherString, keywordUserKey);
+            } else {
+                preEncryptionText = DecryptKeywordCipher(cipherString, keywordUserKey);
                 postEncryptionText = cipherString;
             }
         }else {
@@ -59,8 +75,11 @@ function App() {
     }
 
     function handleVigenereKeyChange(e){
-        console.log("STATE: " + e.target.value)
         setUserVigenereKey(e.target.value)
+    }
+
+    function  handleKeywordKeyChange(e){
+        setKeywordUserKey(e.target.value)
     }
 
     return (
@@ -77,6 +96,8 @@ function App() {
                 onShiftValueChange={handleCaesarShiftValueChange}
                 vigenereKey={userVigenereKey}
                 onVigenereKeyChange={handleVigenereKeyChange}
+                keywordKey={keywordUserKey}
+                onKeywordKeyChange={handleKeywordKeyChange}
             />
             <h2>Pre Encryption</h2>
             <CipherInput
