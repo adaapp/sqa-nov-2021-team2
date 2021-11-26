@@ -79,7 +79,6 @@ export default function CaesarCipher(msg, key) {
             {
                 cipher += msg[i];
             }
-
         }
         return cipher;
     }
