@@ -6,6 +6,8 @@ str Cipher text, str key
 
 export default function DecryptVigenereCipher(cipher_text, key) {
 
+    cipher_text = cipher_text.toUpperCase();
+    key = key.toUpperCase();
     let orig_text="";
     let newKey
 

@@ -75,7 +75,7 @@ function App() {
                 cipherTypeSelected={cipherType}
                 shiftValue={caesarCipherShift}
                 onShiftValueChange={handleCaesarShiftValueChange}
-                vigenereKey={userVigenereKey.toUpperCase()}
+                vigenereKey={userVigenereKey}
                 onVigenereKeyChange={handleVigenereKeyChange}
             />
             <h2>Pre Encryption</h2>
