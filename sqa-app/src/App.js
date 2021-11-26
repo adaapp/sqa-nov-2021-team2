@@ -5,12 +5,15 @@ import {useEffect, useState} from "react";
 import CaesarCipher from "./CipherLogic/CaesarCipher";
 import logo from "./assets/keyIcon.png"
 import ArgsBox from "./components/ArgsBox";
+import VigenereCipher from "./CipherLogic/VigenereCipher";
+import DecryptVigenereCipher from "./CipherLogic/DecryptVigenereCipher";
 
 function App() {
     const [cipherType, setCipherType] = useState("caesar");
     const [cipherString, setCipherString] = useState("");
     const [cipherInString, setCipherInString] = useState(true);
     const [caesarCipherShift, setCaesarCipherShift] = useState();
+    const [userVigenereKey, setUserVigenereKey] = useState("NO KEY");
 
     let preEncryptionText, postEncryptionText;
 
@@ -23,7 +26,18 @@ function App() {
             preEncryptionText = CaesarCipher(cipherString, -Math.abs(caesarCipherShift));
         }
     }else if (cipherType === "vigenere") {
-
+        if ((userVigenereKey != undefined) || (userVigenereKey != '')) {
+            if (cipherInString) {
+                preEncryptionText = cipherString;
+                postEncryptionText =VigenereCipher(cipherString, userVigenereKey);
+            } else {
+                preEncryptionText = DecryptVigenereCipher(cipherString, userVigenereKey)
+                postEncryptionText = cipherString;
+            }
+        }else {
+            preEncryptionText = "NO KEY"
+            postEncryptionText = "NO KEY"
+        }
     }
 
     useEffect(() => {
@@ -44,6 +58,11 @@ function App() {
         setCaesarCipherShift(e.target.value)
     }
 
+    function handleVigenereKeyChange(e){
+        console.log("STATE: " + e.target.value)
+        setUserVigenereKey(e.target.value)
+    }
+
     return (
         <>
             <h1> Cipher App</h1>
@@ -56,6 +75,8 @@ function App() {
                 cipherTypeSelected={cipherType}
                 shiftValue={caesarCipherShift}
                 onShiftValueChange={handleCaesarShiftValueChange}
+                vigenereKey={userVigenereKey}
+                onVigenereKeyChange={handleVigenereKeyChange}
             />
             <h2>Pre Encryption</h2>
             <CipherInput

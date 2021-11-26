@@ -1,15 +1,21 @@
 import React from "react";
-import cipherType from "./CipherType";
 
 export default function argsBox(props) {
     const {
         cipherTypeSelected,
         shiftValue,
-        onShiftValueChange
+        onShiftValueChange,
+        vigenereKey,
+        onVigenereKeyChange
     } = props;
     return (
-        <div>
-            <input type="string" className="smallInput" placeholder={"Number of shifts"} value={shiftValue} onChange={onShiftValueChange} style={{ visibility: cipherTypeSelected !== "caesar"? 'hidden': 'visible'}}/>
+        <div >
+            <div style={{ visibility: cipherTypeSelected !== "caesar"? 'hidden': 'visible'}}>
+                <input type="string" className="smallInput" placeholder={"Number of shifts"} value={shiftValue} onChange={onShiftValueChange} />
+            </div>
+            <div style={{ visibility: cipherTypeSelected !== "vigenere"? 'hidden': 'visible'}}>
+                <input type="string" className="smallInput" placeholder={"Enter Key"} value={vigenereKey} onChange={onVigenereKeyChange} />
+            </div>
         </div>
     )
 }
