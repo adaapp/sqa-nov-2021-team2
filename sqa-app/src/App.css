@@ -6,6 +6,7 @@ body {
   min-height: 100vh;
   text-align: center;
   background: #282c34;
+  font-family: 'Roboto', sans-serif;
 }
 
 h1 {
@@ -29,11 +30,24 @@ h2 {
   width: 21em;
 }
 
+.smallInput {
+  border: 1px solid #333;
+  border-radius: .3rem;
+  padding: .25rem;
+  margin-top: .5rem;
+  width: 10em;
+}
+
 select {
   background: azure;
   width:140px;
-  height:40px;
+  height:30px;
   border:0px;
-  border-radius:36px;
+  border-radius:25px;
   outline:none;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
 }
