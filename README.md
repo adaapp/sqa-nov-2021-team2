@@ -1,8 +1,26 @@
+![alt text](https://cdn.glitch.com/9d50421d-0dee-4efc-8f0a-51d50515a54b%2Fteam2-logo.png?v=1561414377429)
 # sqa-nov-2021-team2
-SQA module November 2021 - team 2
+SQA module November 2021 - Team 2
+
+Within this project assignment, we are to present a simple but well-tested project.
+Our project is based around Ciphers, both encrypting and decrypting. With clear, testable logic involved with such a converter, we have proceeded with multiple ciphers, including Caesar, Vigenere & Keyword Cipher. 
 
 ## Teams Jira:
 [Jira Backlog](https://lgim-ada.atlassian.net/jira/software/projects/SA1/boards/1/roadmap "Jira Backlog")
+
+## Team Roles & Responsibilities
+
+| Person        | Role          | Responsibility            |
+| ------------- |:-------------:| -------------:|
+| William Fifield      | PM - Tester | Manage SCRUM meetings, Create tickets aligned with requirements, test against requirements |
+| Kieran Caruana      | Developer      |   Build and deploy working application |
+| Ethan Davison-Pearce | Developer - Tester      |    Build and deploy working application, test test against requirements |
+
+## Team Process Documentation
+### Ceremonies
+Within the team, we have regular meetings talking about issues and blockers in the project. This helps the development of the project, due to not having a lot of time. Working Agile, we've sped up the process of planning and reviews to fit within the time frame, but are able to use these communication methods to progress business requirements of the team, the development, testing and deployment.
+###
+
 
 ## Available Scripts
 
