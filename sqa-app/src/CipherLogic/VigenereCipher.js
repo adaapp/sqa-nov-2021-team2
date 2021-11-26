@@ -17,10 +17,6 @@ export default function VigenereCipher(str, keyword) {
         // generated with the help of the key
         function cipherText(str,key)
         {
-            // console.log("Before " + str)
-            // str = str.toUpperCase();
-            // console.log("After " + str)
-            // str = LowerToUpper(str)
             if ((key === undefined) || (key === '') || (key === null)){
                 key = "NO KEY"
             }
@@ -37,26 +33,6 @@ export default function VigenereCipher(str, keyword) {
             cipher_text+=String.fromCharCode(x);
         }
             return cipher_text;
-        }
-
-        // This function decrypts the encrypted text
-        // and returns the original text
-
-
-        // This function will convert the lower
-        // case character to Upper case
-        function LowerToUpper(s)
-        {
-            let str =(s).split("");
-            for(let i = 0; i < s.length; i++)
-        {
-            if(s[i] === s[i].toLowerCase())
-        {
-            str[i] = s[i].toUpperCase();
-        }
-        }
-            s = str.toString();
-            return s;
         }
 
         let key = generateKey(str, keyword);

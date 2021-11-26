@@ -11,7 +11,6 @@ export default function DecryptVigenereCipher(cipher_text, key) {
     let orig_text="";
     let newKey
 
-    // cipher_text = cipher_text.toUpperCase()
     key=key.split("");
     if(cipher_text.length === key.length)
         newKey =  key.join("");
