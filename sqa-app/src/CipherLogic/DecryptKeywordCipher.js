@@ -60,7 +60,12 @@ export default function DecryptKeywordCipher(msg, key) {
 // Function that generates encodes(cipher) the message
     function deCipheredIt(msg,encoded)
     {
-        let enc = map
+        const enc = [];
+        for(let i=0;i<encoded.length;i++)
+        {
+            console.log(encoded[i]);
+            enc.push(encoded[i]);
+        }
 
         console.log("deCiph: " + encoded);
         console.log("msg: " + msg);
@@ -72,14 +77,14 @@ export default function DecryptKeywordCipher(msg, key) {
         {
             if (msg[i] >= 'a' && msg[i] <= 'z')
             {
-                let pos = ((msg[i].charCodeAt(0)) - 32);
+                let pos = (enc[(msg[i].charCodeAt(0) - 32)].charCodeAt(0));
                 console.log("Lower case pos: " + pos);
                 cipher += (plaintext[pos]);
                 console.log("Lower case cipher: " + cipher);
             }
             else if (msg[i] >= 'A' && msg[i] <= 'Z')
             {
-                let pos = ((msg[i].charCodeAt(0)));
+                let pos = (enc[(msg[i].charCodeAt(0))].charCodeAt(0));
                 console.log("Upper case pos: " + pos);
                 cipher += (plaintext[pos]);
                 console.log("Upper case cipher: " + cipher);
