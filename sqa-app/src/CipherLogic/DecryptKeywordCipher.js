@@ -1,9 +1,10 @@
 // TODO Add decs
 // TODO Link with frontend
-export default function KeywordCipher(msg, key) {
+export default function DecryptKeywordCipher(msg, key) {
 
+    let plaintext = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let encodedKey = encoder(key)
-    let encodedMsg = cipheredIt(msg, encodedKey)
+    let encodedMsg = deCipheredIt(msg, encodedKey)
     function encoder(key)
     {
         let encoded = "";
@@ -25,7 +26,7 @@ export default function KeywordCipher(msg, key) {
             {
                 // To check whether the character is inserted
                 // earlier in the encoded string or not
-                if (arr[key[i].charCodeAt(0) - 65] == false)
+                if (arr[key[i].charCodeAt(0) - 65] === false)
                 {
                     encoded += ( key[i]);
                     arr[key[i].charCodeAt(0) - 65] = true;
@@ -34,7 +35,7 @@ export default function KeywordCipher(msg, key) {
             else if (key[i].charCodeAt(0) >= 'a'.charCodeAt(0) &&
                 key[i].charCodeAt(0) <= 'z'.charCodeAt(0))
             {
-                if (arr[key[i].charCodeAt(0) - 97] == false)
+                if (arr[key[i].charCodeAt(0) - 97] === false)
                 {
                     encoded +=
                         String.fromCharCode(key[i].charCodeAt(0) - 32);
@@ -47,19 +48,27 @@ export default function KeywordCipher(msg, key) {
         // characters in the encoded string.
         for (let i = 0; i < 26; i++)
         {
-            if (arr[i] == false)
+            if (arr[i] === false)
             {
                 arr[i] = true;
                 encoded += String.fromCharCode(i + 65);
             }
         }
-        console.log("Forward Key: " + encoded);
         return encoded;
     }
 
 // Function that generates encodes(cipher) the message
-    function cipheredIt(msg,encoded)
+    function deCipheredIt(msg,encoded)
     {
+        const enc = [];
+        for(let i=0;i<encoded.length;i++)
+        {
+            console.log(encoded[i]);
+            enc.push(encoded[i]);
+        }
+
+        console.log("deCiph: " + encoded);
+        console.log("msg: " + msg);
         let cipher = "";
 
         // This loop ciphered the message.
@@ -68,20 +77,26 @@ export default function KeywordCipher(msg, key) {
         {
             if (msg[i] >= 'a' && msg[i] <= 'z')
             {
-                let pos = ((msg[i].charCodeAt(0)) - 97);
-                cipher += (encoded[pos]);
+                let pos = (enc[(msg[i].charCodeAt(0) - 32)].charCodeAt(0));
+                console.log("Lower case pos: " + pos);
+                cipher += (plaintext[pos]);
+                console.log("Lower case cipher: " + cipher);
             }
             else if (msg[i] >= 'A' && msg[i] <= 'Z')
             {
-                let pos = ((msg[i].charCodeAt(0)) - 65);
-                cipher += (encoded[pos]);
+                let pos = (enc[(msg[i].charCodeAt(0))].charCodeAt(0));
+                console.log("Upper case pos: " + pos);
+                cipher += (plaintext[pos]);
+                console.log("Upper case cipher: " + cipher);
             }
             else
             {
                 cipher += msg[i];
             }
         }
+        console.log("Cipher: " + cipher);
         return cipher;
     }
+    console.log("Msg: " + encodedMsg);
     return encodedMsg;
 }

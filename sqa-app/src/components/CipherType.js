@@ -14,9 +14,9 @@ export default function cipherType(props) {
                 <option value={"vigenere"}>
                     Vigenere Cipher
                 </option>
-                <option value={"Cipher3"}>
-                    Cipher 3
-                </option>
+                {/*<option value={"keyword"}>*/}
+                {/*    Keyword Cipher*/}
+                {/*</option>*/}
             </select>
         </div>
     )

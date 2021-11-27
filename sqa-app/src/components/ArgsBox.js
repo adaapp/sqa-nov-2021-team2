@@ -6,16 +6,21 @@ export default function argsBox(props) {
         shiftValue,
         onShiftValueChange,
         vigenereKey,
-        onVigenereKeyChange
+        onVigenereKeyChange,
+        keywordKey,
+        onKeywordKeyChange
     } = props;
     return (
         <div >
-            <div style={{ visibility: cipherTypeSelected !== "caesar"? 'hidden': 'visible'}}>
-                <input type="string" className="smallInput" placeholder={"Number of shifts"} value={shiftValue} onChange={onShiftValueChange} />
-            </div>
-            <div style={{ visibility: cipherTypeSelected !== "vigenere"? 'hidden': 'visible'}}>
+            {cipherTypeSelected === "caesar" ? (
+                <input type="number" className="smallInput" placeholder={"Number of shifts"} value={shiftValue} onChange={onShiftValueChange} />
+            ) : cipherTypeSelected === "vigenere" ? (
                 <input type="string" className="smallInput" placeholder={"Enter Key"} value={vigenereKey} onChange={onVigenereKeyChange} />
-            </div>
+            ) : cipherTypeSelected === "keyword" ? (
+                <input type="string" className="smallInput" placeholder={"Enter Key"} value={keywordKey} onChange={onKeywordKeyChange} />
+            ) : (
+                <div/>
+            )}
         </div>
     )
 }

@@ -30,8 +30,6 @@ export default function CaesarCipher(s, k) {
         }
 
         result += String.fromCharCode(charCode);
-        console.log(result)
-        console.log("TEST")
 
     }
 return result;
