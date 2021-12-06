@@ -1,6 +1,6 @@
 //A Caesar cipher is a simple method of encoding messages.
 // Caesar ciphers use a substitution method where letters in the alphabet are shifted by some fixed number of spaces to yield an encoding alphabet.
-export default function CaesarCipher(s, k) {
+function CaesarCipher(s, k) {
     let result = '';
     for (let i = 0; i < s.length; i++) {
 
@@ -35,3 +35,5 @@ export default function CaesarCipher(s, k) {
 return result;
 
 }
+
+module.exports = CaesarCipher;
