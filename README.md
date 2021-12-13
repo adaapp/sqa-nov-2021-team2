@@ -8,6 +8,9 @@ Our project is based around Ciphers, both encrypting and decrypting. With clear,
 ## Live App:
 [Cipher App](https://cipher.kierancaruana.com/ "Cipher app")
 
+## Testing Repo:
+[Cipher App Testing](https://github.com/RandomEDP/sqa-nov-2021-team2-Testing "Cipher app testing")
+
 ## Teams Jira:
 [Jira Backlog](https://lgim-ada.atlassian.net/jira/software/projects/SA1/boards/1/roadmap "Jira Backlog")
 
