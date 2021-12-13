@@ -7,7 +7,7 @@ export default function cipherType(props) {
     } = props;
     return (
         <div>
-            <select value={selectedType} onChange={onChangeType}>
+            <select id={"cipherTypeSelector"} value={selectedType} onChange={onChangeType}>
                 <option value={"caesar"}>
                     Caesar Cipher
                 </option>

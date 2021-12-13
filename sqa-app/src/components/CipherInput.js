@@ -7,7 +7,7 @@ export default function cipherInput(props) {
     } = props;
     return (
         <div>
-            <input type="string" placeholder={"Enter text here"} className="input" value={cipherString} onChange={onChangeCipherString}/>
+            <input id={"cipherInput"} type="string" placeholder={"Enter text here"} className="input" value={cipherString} onChange={onChangeCipherString}/>
         </div>
     )
 }

@@ -13,11 +13,11 @@ export default function argsBox(props) {
     return (
         <div >
             {cipherTypeSelected === "caesar" ? (
-                <input type="number" className="smallInput" placeholder={"Number of shifts"} value={shiftValue} onChange={onShiftValueChange} />
+                <input id={"caesarArgBox"} type="number" className="smallInput" placeholder={"Number of shifts"} value={shiftValue} onChange={onShiftValueChange} />
             ) : cipherTypeSelected === "vigenere" ? (
-                <input type="string" className="smallInput" placeholder={"Enter Key"} value={vigenereKey} onChange={onVigenereKeyChange} />
+                <input id={"vigenereArgBox"} type="string" className="smallInput" placeholder={"Enter Key"} value={vigenereKey} onChange={onVigenereKeyChange} />
             ) : cipherTypeSelected === "keyword" ? (
-                <input type="string" className="smallInput" placeholder={"Enter Key"} value={keywordKey} onChange={onKeywordKeyChange} />
+                <input id={"keywordArgBox"} type="string" className="smallInput" placeholder={"Enter Key"} value={keywordKey} onChange={onKeywordKeyChange} />
             ) : (
                 <div/>
             )}

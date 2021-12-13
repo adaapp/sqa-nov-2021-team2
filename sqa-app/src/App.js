@@ -84,8 +84,8 @@ function App() {
 
     return (
         <>
-            <h1> Cipher App</h1>
-            <h2>Select Cipher Method</h2>
+            <h1 id={"Title"}> Cipher App</h1>
+            <h2 id={"SelectCipherMethodHeading"}>Select Cipher Method</h2>
             <CipherType
                 selectedType = {cipherType}
                 onChangeType={e => setCipherType(e.target.value)}
@@ -99,17 +99,17 @@ function App() {
                 keywordKey={keywordUserKey}
                 onKeywordKeyChange={handleKeywordKeyChange}
             />
-            <h2>Pre Encryption</h2>
+            <h2 id={"preEncryptionHeader"}>Pre Encryption</h2>
             <CipherInput
                 cipherString={preEncryptionText}
                 onChangeCipherString={handlePreCipherStringChange}
             />
-            <h2>Post Encryption</h2>
+            <h2 id={"postEncryptionHeader"}>Post Encryption</h2>
             <CipherInput
                 cipherString={postEncryptionText}
                 onChangeCipherString={handlePostCipherStringChange}
             />
-            <img src={logo} alt={"logo"} className="logo"/>
+            <img id={"logoImage"} src={logo} alt={"logo"} className="logo"/>
         </>
     );
 }
