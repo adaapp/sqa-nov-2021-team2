@@ -1,9 +1,9 @@
 ![alt text](https://cdn.glitch.com/9d50421d-0dee-4efc-8f0a-51d50515a54b%2Fteam2-logo.png?v=1561414377429)
-# sqa-nov-2021-team2
+# SQA-Nov-2021-Team2
 SQA module November 2021 - Team 2
 
 Within this project assignment, we are to present a simple but well-tested project.
-Our project is based around Ciphers, both encrypting and decrypting. With clear, testable logic involved with such a converter, we have proceeded with multiple ciphers, including Caesar, Vigenere & Keyword Cipher. 
+Our project is based around Ciphers, both encrypting and decrypting. With clear, testable logic involved with such a converter, we have proceeded with multiple ciphers, including Caesar & Vigenere. 
 
 ## Live App:
 [Cipher App](https://cipher.kierancaruana.com/ "Cipher app")
@@ -22,8 +22,12 @@ Our project is based around Ciphers, both encrypting and decrypting. With clear,
 | Kieran Caruana      | Developer      |   Build and deploy working application |
 | Ethan Davison-Pearce | Developer - Tester      |    Build and deploy working application, test against requirements |
 
+We're working on an Agile SCRUM methodology, of which is what we are familiar with at our workplace. Due to working with a small timeframe, we are using more ad-hoc measures to allow for better management between the assignment work and official work. With our roles, we take on different sets or responsibilities, but all take part and help one-another if issues arise. This works within the Agile methodology, working against blockers as a team, and building the application without any stop in progress. 
+
 ## SQA Strategy v.1
-### Ceremonies
+
+### Agile Scrum Processes
+#### Ceremonies
 Within the team, we have regular meetings talking about issues and blockers in the project. This helps the development of the project, due to not having a lot of time. Working Agile, we've sped up the process of planning and reviews to fit within the time frame, but are able to use these communication methods to progress business requirements of the team, the development, testing and deployment.
 
 The project manager (PM) for the team will work as the business analyst, studying the requirements and goals that the client needs, and breaks these down into "Stories". These tasks are discussed with the other developers and testers to ensure that the story isn't too broad, and then it is assigned to the person who will be working on it. Using the project management tool JIRA, we can easily create these tickets and assign each team member to their respective tasks.
@@ -62,15 +66,15 @@ Retrospective on 12/12/2021. The meeting notes are as followed:
 ### Definition of Done
 The definition is done is a clear checklist for completing user stories within projects. The term "done" means that the particular feature has been developed, fully tested and meets the requirements for the story. A clear test for this is by asking the question: "Would the customer be happy with this being deployed?".
 
-- Unit tests passed
-- Code reviewed
-- Functional tests with QA are passed
-- Issues detected during QA are resolved
-- Non-functional UAT testing requirements met
-- Issues detected during UAT are resolved
-- Blockers, critical and major bugs are fixed
-- Acceptance criteria met
-- Product Owner accepts the user story
+- Unit tests passed,
+- Code reviewed,
+- Functional tests with QA are passed,
+- Issues detected during QA are resolved,
+- Non-functional UAT testing requirements met,
+- Issues detected during UAT are resolved,
+- Blockers, critical and major bugs are fixed,
+- Acceptance criteria met,
+- Product Owner accepts the user story,
 
 ### Types of testing this team will be using
 
@@ -109,6 +113,34 @@ Please refer to the below standards:
 
 Not everything is covered in coding standards, and these standards can be updated at any time if a new clear standard needs to be met. During a code review these should be checked, as well as any potential new standards that haven't been listed above.
 
+
+## Test Plans
+
+### Scope
+This application will be able to encrypt and decrypt using 2 basic ciphers, Caesar and Vigenere. Within these test plans we can target our tests and validation methods to meet the requirements from the assignment "client".
+This includes: The Graphical User Interface (GUI), the Logic, Quality of code, and functions that don't require testing.
+
+### Quality Objectives
+The main objective of this assignment and the testing for this assignment is for the application to meet the full user requirements set out within the assignment requirements, however this takes a slightly different approach for this application. Due to the application idea and requirements being created by us in the team, the focus is on the different approaches to testing for the application. This is broken down in the types of testing that is shown above, in "Types of testing this team will be using".
+
+For that reason, the main objective can be broken into a very "secondary" objective, where our vast testing will help identify any functionality faults within the application, and work with logic to build the cipher and test them sufficiently.
+
+### Test Approach
+This is shown in our types of testing, shown above.
+
+### Test Strategy
+The QA role is given to member who will overlook and take on the QA for the application. This role requires the person to understand the requirements, and also the functionality that the developer has written. Building basic unit test should be carried out by the developer, but other types of testing (such as end-to-end and manual) can be written and scoped out in advance, preparing for when feature work has been completed and moved into QA within JIRA.
+
+Bugs are a common thing that happen, and are often found within the QA of an application. The bug that rises from a ticket means that new ticket is created with the bug listed, and the original is left in QA as it hasn't passed. This bug will then move back and forth between Development and QA until it is successful, meaning the original ticket can now be completed also.
+The priority of bugs are key when testing, but within this application they cannot be too severe. Working in an Agile Scrum team means that any blockers that come with the bug means we can aid the ticket, and resolve any issues. Typically, severity is classed on how much it impacts within the application, from low being that a number box accepts letters, to high being that the application doesn't load.
+
+Due to the time given on this project, QA is being completed when tickets are placed into the QA column within JIRA. QA members can also prepare, as stated above, for later features. For this reason, a test schedule will all show the same date as testing is done later in the development of this application. The timeline is showcased in the DoD (Definition of Done) section above, highlighting our approach to release.
+
+## Manual Tests
+
+Please see the below link to manual tests carried out at the for this project application.
+
+https://docs.google.com/spreadsheets/d/1rBOsmxqM9a_onB8koWqaa8TOcCeNtsKvChmZE158dnE/edit?usp=sharing
 
 ## Available Scripts
 
