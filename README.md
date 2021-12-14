@@ -30,13 +30,24 @@ The project manager (PM) for the team will work as the business analyst, studyin
 
 During ceremonies, we discussed what work we would be working on, and if there were any issues or blockers in the work. This highlighted issues as we went along, such as compatability issues with end-to-end testing. We use this time to discuss and offer help to those blocked to help the project progress.
 
+These meetings were done ad-hoc, as working on this project along-side other official work means team members are less available on certain days, with a similar path with the retrospective. These are held when issues arise to allow other members to help with issues or bugs that the application is facing in a feature. The retrospective meetings are being held until the penultimate week, and then again on the submission week.
+
 #### Retrospectives
-This team ran through a retrospective on 12/12/2021. The meeting notes are as followed:
+Retrospective on 09/12/2021. The meeting notes are as followed:
 
 - Tickets were clear, but some had to be broken down more during the sprint as the work was underestimated,
-- The end-to-end testing system we need to use is outside our main repo, but this can be done and linked in the main application readme.
-- Final work takes place on the 14/12/2021, with test deployment already in play,
+- The end-to-end testing system we need to use is outside our main repo, need to ask Katia if this will work in accordance to the assignment.
 - Integration testing in AWS still needs to be worked on, this will be done in the following days.
+- Ad-hoc stand-ups work well, where every member is free to jump on a call and discuss any issues with any particular ticket being worked on.
+- Positive notes around PRs, where there's always someone to review and make comments to coincide with our coding standards, the ticketed work, and the PR review rules. 
+
+
+Retrospective on 12/12/2021. The meeting notes are as followed:
+
+- Tickets are better paced and broken down enough as we lead up to the last days of the project,
+- The end-to-end testing system we had a problem with has been resolved talking to Katia, and can be done and linked in the main application readme.
+- Final work takes place on the 14/12/2021, with test deployment already in play,
+- Integration testing in AWS has minor issues, but can be resolved for Tuesday full deployment.
 
 
 
