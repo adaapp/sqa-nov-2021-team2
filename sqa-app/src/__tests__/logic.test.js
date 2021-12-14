@@ -1,4 +1,6 @@
 const CaesarCipher = require("../CipherLogic/CaesarCipher");
+const VigenereCipher = require("../CipherLogic/VigenereCipher");
+const DecryptVigenereCipher = require("../CipherLogic/DecryptVigenereCipher");
 
 test('caesarCipher', () => {
     expect(CaesarCipher('a', 1)).toBe('b');
@@ -29,3 +31,32 @@ test('caesarCipher', () => {
     expect(CaesarCipher('a', 26)).toBe('a');
     expect(CaesarCipher('a', 27)).toBe('b');
 });
+
+test('wordCaesarCipher', () => {
+    expect(CaesarCipher('hello', 1)).toBe('ifmmp');
+    expect(CaesarCipher('caesar', 2)).toBe('ecguct');
+    expect(CaesarCipher('test', 3)).toBe('whvw');
+})
+
+test('encryptVigenereCipher', () => {
+    expect(VigenereCipher('abc', 'dog')).toBe('DPI');
+    expect(VigenereCipher('xyz', 'dog')).toBe('AMF');
+    expect(VigenereCipher('abc', 'cat')).toBe('CBV');
+    expect(VigenereCipher('abc', 'abc')).toBe('ACE');
+    expect(VigenereCipher('abc', 'xyz')).toBe('XZB');
+    expect(VigenereCipher('test', 'testWord')).toBe('MIKM')
+    expect(VigenereCipher('hello', 'world')).toBe('DSCWR')
+    expect(VigenereCipher('vigenere', 'cipher')).toBe('XQVLRVTM')
+})
+
+test('decryptVigenereCipher', () => {
+    expect(DecryptVigenereCipher('DPI', 'dog')).toBe('ABC');
+    expect(DecryptVigenereCipher('AMF', 'dog')).toBe('XYZ');
+    expect(DecryptVigenereCipher('CBV', 'cat')).toBe('ABC');
+    expect(DecryptVigenereCipher('ACE', 'abc')).toBe('ABC');
+    expect(DecryptVigenereCipher('XZB', 'xyz')).toBe('ABC');
+    expect(DecryptVigenereCipher('MIKM', 'test')).toBe('TEST')
+    expect(DecryptVigenereCipher('DSCWR', 'hello')).toBe('WORLD')
+    expect(DecryptVigenereCipher('XQVLRVTM', 'cipher')).toBe('VIGENERE')
+})
+

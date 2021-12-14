@@ -1,4 +1,4 @@
-export default function VigenereCipher(str, keyword) {
+function VigenereCipher(str, keyword) {
 
         function generateKey(str,key) {
             key=key.split("");
@@ -42,3 +42,4 @@ export default function VigenereCipher(str, keyword) {
 
         return cipherText(str, key);
 }
+module.exports = VigenereCipher;
