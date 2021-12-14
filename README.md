@@ -14,6 +14,8 @@ Our project is based around Ciphers, both encrypting and decrypting. With clear,
 ## Teams Jira:
 [Jira Backlog](https://lgim-ada.atlassian.net/jira/software/projects/SA1/boards/1/roadmap "Jira Backlog")
 
+[Jira Sprint Burndown (View for ticketed work throughout project)](https://lgim-ada.atlassian.net/jira/software/projects/SA1/boards/1/reports/burndown)
+
 ## Team Roles & Responsibilities
 
 | Person        | Role          | Responsibility            |
@@ -126,7 +128,13 @@ The main objective of this assignment and the testing for this assignment is for
 For that reason, the main objective can be broken into a very "secondary" objective, where our vast testing will help identify any functionality faults within the application, and work with logic to build the cipher and test them sufficiently.
 
 ### Test Approach
-This is shown in our types of testing, shown above.
+This is shown in depth in our types of testing, shown above.
+
+The types of testing we're using are: Static Testing, Unit Testing, Test Driven Development (TDD), Integration Testing, End-To-End Testing and Manual Testing.
+
+These types of testing are chosen to suit our application best as other methods, such as: User Acceptance Testing (UAT) requires users to gauge testing off of; Alpha/Beta testing also require this broader scope of users, i18n requires a greater testing system that (due to the time-scale) we couldn't implement in time.
+
+With test methods like i18n being suited but not chosen highlights the testing needs of most applications and software in the modern era. i18n highlight compatibility with different languages and cultures, allowing the application to suit wherever it is being used. If you wanted to do this manually you would need a wider scope of international persons to help with this testing, which we didn't have available.
 
 ### Test Strategy
 The QA role is given to member who will overlook and take on the QA for the application. This role requires the person to understand the requirements, and also the functionality that the developer has written. Building basic unit test should be carried out by the developer, but other types of testing (such as end-to-end and manual) can be written and scoped out in advance, preparing for when feature work has been completed and moved into QA within JIRA.
