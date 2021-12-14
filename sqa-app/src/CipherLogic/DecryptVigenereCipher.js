@@ -4,7 +4,7 @@ Takes 2 args
 str Cipher text, str key
  */
 
-export default function DecryptVigenereCipher(cipher_text, key) {
+function DecryptVigenereCipher(cipher_text, key) {
 
     cipher_text = cipher_text.toUpperCase();
     key = key.toUpperCase();
@@ -43,3 +43,5 @@ export default function DecryptVigenereCipher(cipher_text, key) {
 
     return orig_text;
 }
+
+module.exports = DecryptVigenereCipher;

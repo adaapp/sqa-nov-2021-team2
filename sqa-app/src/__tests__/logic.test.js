@@ -1,5 +1,8 @@
 const CaesarCipher = require("../CipherLogic/CaesarCipher");
+const VigenereCipher = require("../CipherLogic/VigenereCipher");
+const DecryptVigenereCipher = require("../CipherLogic/DecryptVigenereCipher");
 
+//Simple test to check the alphabet is encrypted correctly. Takes a as an input and encrypts it to check each shift value is correct.
 test('caesarCipher', () => {
     expect(CaesarCipher('a', 1)).toBe('b');
     expect(CaesarCipher('a', 2)).toBe('c');
@@ -29,3 +32,35 @@ test('caesarCipher', () => {
     expect(CaesarCipher('a', 26)).toBe('a');
     expect(CaesarCipher('a', 27)).toBe('b');
 });
+
+//More advanced test of caesar cipher, encrypts words and check the result is the expected encrypted string
+test('wordCaesarCipher', () => {
+    expect(CaesarCipher('hello', 1)).toBe('ifmmp');
+    expect(CaesarCipher('caesar', 2)).toBe('ecguct');
+    expect(CaesarCipher('test', 3)).toBe('whvw');
+})
+
+//Encrypts words or strings using vigenere cipher and checks the result is the expected encrypted string
+test('encryptVigenereCipher', () => {
+    expect(VigenereCipher('abc', 'dog')).toBe('DPI');
+    expect(VigenereCipher('xyz', 'dog')).toBe('AMF');
+    expect(VigenereCipher('abc', 'cat')).toBe('CBV');
+    expect(VigenereCipher('abc', 'abc')).toBe('ACE');
+    expect(VigenereCipher('abc', 'xyz')).toBe('XZB');
+    expect(VigenereCipher('test', 'testWord')).toBe('MIKM')
+    expect(VigenereCipher('hello', 'world')).toBe('DSCWR')
+    expect(VigenereCipher('vigenere', 'cipher')).toBe('XQVLRVTM')
+})
+
+//Takes the encrypted strings from previous test and decrypts them using the vigenere cipher and checks the result is the expected decrypted string
+test('decryptVigenereCipher', () => {
+    expect(DecryptVigenereCipher('DPI', 'dog')).toBe('ABC');
+    expect(DecryptVigenereCipher('AMF', 'dog')).toBe('XYZ');
+    expect(DecryptVigenereCipher('CBV', 'cat')).toBe('ABC');
+    expect(DecryptVigenereCipher('ACE', 'abc')).toBe('ABC');
+    expect(DecryptVigenereCipher('XZB', 'xyz')).toBe('ABC');
+    expect(DecryptVigenereCipher('MIKM', 'test')).toBe('TEST')
+    expect(DecryptVigenereCipher('DSCWR', 'hello')).toBe('WORLD')
+    expect(DecryptVigenereCipher('XQVLRVTM', 'cipher')).toBe('VIGENERE')
+})
+
