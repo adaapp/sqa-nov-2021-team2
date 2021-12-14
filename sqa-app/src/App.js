@@ -9,6 +9,7 @@ import VigenereCipher from "./CipherLogic/VigenereCipher";
 import DecryptVigenereCipher from "./CipherLogic/DecryptVigenereCipher";
 import KeywordCipher from "./CipherLogic/KeywordCipher";
 import DecryptKeywordCipher from "./CipherLogic/DecryptKeywordCipher";
+import cipherInput from "./components/CipherInput";
 
 function App() {
     const [cipherType, setCipherType] = useState("caesar");
@@ -26,7 +27,12 @@ function App() {
             postEncryptionText = CaesarCipher(cipherString, caesarCipherShift);
         }else {
             postEncryptionText = cipherString;
-            preEncryptionText = CaesarCipher(cipherString, -Math.abs(caesarCipherShift));
+            if (caesarCipherShift >=0){
+                preEncryptionText = CaesarCipher(cipherString, -Math.abs(caesarCipherShift));
+            }else {
+                preEncryptionText = CaesarCipher(cipherString, (-Math.abs(caesarCipherShift))*-1);
+            }
+
         }
     }else if (cipherType === "vigenere") {
         if ((userVigenereKey !== undefined) || (userVigenereKey !== '')) {
