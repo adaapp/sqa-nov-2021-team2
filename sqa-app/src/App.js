@@ -101,11 +101,13 @@ function App() {
             />
             <h2 id={"preEncryptionHeader"}>Pre Encryption</h2>
             <CipherInput
+                id={"preEncryptionInput"}
                 cipherString={preEncryptionText}
                 onChangeCipherString={handlePreCipherStringChange}
             />
             <h2 id={"postEncryptionHeader"}>Post Encryption</h2>
             <CipherInput
+                id={"postEncryptionInput"}
                 cipherString={postEncryptionText}
                 onChangeCipherString={handlePostCipherStringChange}
             />

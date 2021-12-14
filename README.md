@@ -6,10 +6,15 @@ Within this project assignment, we are to present a simple but well-tested proje
 Our project is based around Ciphers, both encrypting and decrypting. With clear, testable logic involved with such a converter, we have proceeded with multiple ciphers, including Caesar, Vigenere & Keyword Cipher. 
 
 ## Live App:
+The app is live and deployed, it is being hosted by AWS Amplify here:
 [Cipher App](https://cipher.kierancaruana.com/ "Cipher app")
 
-## Testing Repo:
+## Selenium Testing Repo:
+Selenium needs a separate repo, as it is a separate project. You can find the repo here:
 [Cipher App Testing](https://github.com/RandomEDP/sqa-nov-2021-team2-Testing "Cipher app testing")
+
+### Selenium Testing In Action
+![testingInAction](https://s3.eu-west-2.amazonaws.com/cloud.kierancaruana.com/ada/unknown_2021.12.14-16.32_1.gif)
 
 ## Teams Jira:
 [Jira Backlog](https://lgim-ada.atlassian.net/jira/software/projects/SA1/boards/1/roadmap "Jira Backlog")
